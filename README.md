@@ -1,6 +1,6 @@
 # Figaroh Plus
 
-This is the repository that contains source code for the [Figaroh Plus website](https://figaroh-plus.github.io).
+This is the repository that contains source code for the [Figaroh Plus website](https://thanhndv212.github.io/figaroh-plus-webpage).
 
 ## How to Create a GitHub.io Webpage
 
@@ -19,7 +19,7 @@ Your site may take a few minutes to deploy. GitHub will show a green checkmark w
 Start by either cloning this repository or downloading it as a ZIP file:
 ```bash
 # Clone the repository
-git clone https://github.com/figaroh-plus/figaroh-plus.github.io.git your-project-name
+git clone https://github.com/thanhndv212/figaroh-plus-webpage.git your-project-name
 cd your-project-name
 
 # Remove git history and start fresh

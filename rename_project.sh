@@ -1,4 +1,3 @@
-# <!-- filepath: /Users/thanhndv212/Develop/nerfies.github.io/rename_project.sh -->
 #!/bin/bash
 
 # Check if the new project name is provided
@@ -9,9 +8,9 @@ if [ $# -eq 0 ]; then
 fi
 
 NEW_PROJECT_NAME=$1
-OLD_PROJECT_NAME="Nerfies"
+OLD_PROJECT_NAME="figaroh-plus"
 # Lowercase versions for file/directory names
-OLD_PROJECT_NAME_LOWER="nerfies"
+OLD_PROJECT_NAME_LOWER="figaroh-plus"
 NEW_PROJECT_NAME_LOWER=$(echo "$NEW_PROJECT_NAME" | tr '[:upper:]' '[:lower:]')
 
 echo "Replacing '$OLD_PROJECT_NAME' with '$NEW_PROJECT_NAME' throughout the project..."
@@ -24,17 +23,17 @@ find . -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" -o -name "*.md
     # Replace lowercase versions
     sed -i '' "s/$OLD_PROJECT_NAME_LOWER/$NEW_PROJECT_NAME_LOWER/g" "$file"
     # Replace occurrences in URLs, paths, etc.
-    sed -i '' "s/nerfies\.github\.io/$NEW_PROJECT_NAME_LOWER\.github\.io/g" "$file"
+    sed -i '' "s/figaroh-plus\.github\.io/$NEW_PROJECT_NAME_LOWER\.github\.io/g" "$file"
 done
 
 # Update title tag in HTML files
 find . -name "*.html" | while read -r file; do
-    sed -i '' "s/<title>.*<\/title>/<title>$NEW_PROJECT_NAME: Deformable Neural Radiance Fields<\/title>/g" "$file"
+    sed -i '' "s/<title>.*<\/title>/<title>$NEW_PROJECT_NAME<\/title>/g" "$file"
 done
 
 # Update meta tags
 find . -name "*.html" | while read -r file; do
-    sed -i '' "s/content=\".*Nerfies.*\"/content=\"$NEW_PROJECT_NAME: Deformable Neural Radiance Fields\"/g" "$file"
+    sed -i '' "s/content=\".*figaroh-plus.*\"/content=\"$NEW_PROJECT_NAME\"/g" "$file"
 done
 
 # Update README.md title
